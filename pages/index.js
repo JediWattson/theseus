@@ -1,7 +1,14 @@
-import Image from 'next/image'
+import { Fragment } from 'react'
+import Head from 'next/head'
 
 function HomePage() {
-  return <Image src="/homer.jpeg" alt="homer" width="200" height="100" />
+  return (
+      <Fragment>
+        <Head>
+          <script src="homer/index.js" onLoad={() => console.log("HELLO")} />
+        </Head>
+      </Fragment>
+  )
 }
 
 export default HomePage
